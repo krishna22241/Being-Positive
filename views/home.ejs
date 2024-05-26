@@ -1,0 +1,86 @@
+<!-- views/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MINOR PROJ</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      #registerForm {
+        display: none;
+      }
+    </style>
+    <!-- Add any additional styles or scripts here -->
+  </head>
+  <body>
+    <div class="circ1" style="background-color: red"></div>
+    <div
+      class="circ2"
+      style="background-color: rgb(131, 198, 220); left: 25%"
+    ></div>
+    <div class="circ3" style="background-color: rgb(204, 77, 98)"></div>
+    <div class="circ4" style="background-color: red"></div>
+    <div class="circ5" style="background-color: rgb(0, 191, 255)"></div>
+    <div class="circ6" style="background-color: rgb(87, 182, 241)"></div>
+
+    <div class="nav">
+      <h3><b>HOME</b></h3>
+      <h3>
+        <B><a href="#ABOUT">ABOUT</a></B>
+      </h3>
+      <h3><b>CONTACT</b></h3>
+    </div>
+
+    <h1 class="grad">BEING POSITIVE</h1>
+    <p>
+      "Whenever, However and Whatever <ok>blood</ok> you need, We are here to
+      help."
+    </p>
+
+    <div class="urgency">
+      <a href="/reg">IT'S AN EMERGENCY</a>
+    </div>
+
+    <div class="options">
+      <a href="/reg" onclick="showDonorForm()"><h2>DONOR</h2></a>
+      <a href="/regP" onclick="showDonorForm()"><h2>PATIENT</h2></a>
+      <a href="/regA" onclick="showDonorForm()"><h2>ADMINISTRATIVE</h2></a>
+    </div>
+
+    <div class="majorbody">
+      <div id="ABOUT">
+        <div class="leftoo">
+          <parag
+            >Welcome to our web application, a compassionate bridge connecting
+            those in need of life-saving blood and altruistic donors eager to
+            make a difference. Our platform serves as a pivotal link between
+            individuals seeking blood donations and blood banks dedicated to
+            managing their inventory efficiently. For blood banks, our
+            application provides a streamlined interface to meticulously
+            organize and track units of available blood, ensuring a seamless and
+            prompt response to urgent requests. To uphold the safety of our
+            donors and recipients, our system mandates that prospective donors
+            undergo a health screening to confirm their eligibility for
+            donation, ensuring a healthy and secure blood supply chain.
+            Embracing the spirit of community and solidarity, our web app
+            strives to enhance the efficiency of blood donation processes while
+            prioritizing the well-being of both donors and recipients. Join us
+            in this lifesaving mission, where each contribution makes a profound
+            impact on the journey towards a healthier and more resilient
+            society.</parag
+          >
+        </div>
+        <div class="rightoo">
+          <img src="top-view-of-square-card-mockup-with-pen-on-fabric-2.jpg" />
+          <text><u>ABOUT US</u></text>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showDonorForm() {
+        var donorForm = document.getElementById("registerForm");
+        registerForm.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

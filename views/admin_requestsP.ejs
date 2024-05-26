@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>admin to donoations panel</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="budy">
+    <div class="red_nav"><h2>BEING POSITIVE</h2>  <a
+        class="logs"
+        id="logoutButton"
+        href="/api/v1/signout"
+        style="background-color: rgb(191, 32, 32), color=white"
+        >LOGOUT</a
+      ></div>
+    <div class="bodf">
+    <div class="leftz">
+        <ul>
+            <li><a href="/Ahome">HOME</li></a>
+            <li><a href="/adminD">DONOR</li></a>
+            <li><a href="/adminP">PATIENT</li></a>
+            <li><a href="/adminDR">DONATIONS</li></a>
+            <li  style="background: bisque; color:#1e1e25;"><a href="#">BLOOD REQUESTS</li></a>
+        
+        </ul>
+    </div>
+    <div class="rightz">
+        <h1 style="font-size:xx-large; margin-left:120px; margin-top:65px;">BLOOD REQUESTS</h1>
+        <table class="donor_dets">
+        <thead>
+          <tr>
+            <th>NAME</th>
+            <th>BLOOD GROUP</th>
+            <th>QUANTITY</th>
+            <th>REASON</th>
+            <th>STATUS</th>
+            <th>DATE</th>
+          </tr>
+        </thead>
+        <tbody>
+        <%  for(let i=0;i<patientRequests.length;i++){ %>
+          <tr>
+            <td><%=patientRequests[i].patientName%></td>
+            <td><%=patientRequests[i].patientBloodGroup%></td>
+            <td><%=patientRequests[i].requestQuantity%></td>
+            <td><%=patientRequests[i].requestReason%></td>
+            <td><%=patientRequests[i].requestStatus%></td>
+            <td><%=patientRequests[i].requestDate%></td>
+          </tr>
+          <%}%>    
+        </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
